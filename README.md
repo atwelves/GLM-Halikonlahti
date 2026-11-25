@@ -4,5 +4,5 @@ Use of Python-based General Lake Model (GLM) to simulate seasonal cycle in tempe
 - Namelist
 - Run script
 - Forcing conversion script
-- Post-processing script (compatible with pika-ERGOM)
+**process_glm.py**- Post-processing script (compatible with pika-ERGOM) 
 - Scripts to compare against observations

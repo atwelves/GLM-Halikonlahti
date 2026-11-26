@@ -10,7 +10,7 @@ output_varnames = ['AirTemp'                  ,'RelHum'                    ,'Win
 val_array = np.zeros((len(input_filenames),365*24))
 
 for i in range(0,len(input_filenames)):
-    df = pd.read_csv('{}.csv'.format(input_filenames[i]))
+    df = pd.read_csv('fmi_forcing/{}.csv'.format(input_filenames[i]))
     df['Date'] = pd.to_datetime(df[['Year','Month','Day']])
     df.loc[:,'Date'] = pd.to_datetime(df.Date.astype(str)+' '+df['Time [UTC]'].astype(str))
     print(df)

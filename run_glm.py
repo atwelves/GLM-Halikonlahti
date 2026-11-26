@@ -30,6 +30,7 @@ depth = 23
 num_samples = 3
 sample_depths = [1,10,22]
 sample_temps  = [2.5,2.1,2.1]
+sample_sals   = [4.0,4.0,4.0]
 
 # lake dimensions
 length=1e4
@@ -71,7 +72,7 @@ glm_sim.set_param_value("glm","init_profiles","lake_depth",depth)
 glm_sim.set_param_value("glm","init_profiles","num_depths",num_samples)
 glm_sim.set_param_value("glm","init_profiles","the_depths",sample_depths)
 glm_sim.set_param_value("glm","init_profiles","the_temps",sample_temps)
-glm_sim.set_param_value("glm","init_profiles","the_sals",[0,0,0,0,0])
+glm_sim.set_param_value("glm","init_profiles","the_sals",sample_sals)
 # Surface forcing
 glm_sim.set_param_value("glm","meteorology","meteo_fl",'met.csv')
 # Inflow

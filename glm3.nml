@@ -1,0 +1,92 @@
+&glm_setup
+    min_layer_vol = 0.01
+    min_layer_thick = 0.1
+    max_layer_thick = 1.0
+    density_model = 1
+/
+
+&time
+    timefmt = 3
+    dt = 3600.0 
+/
+
+&morphometry
+/
+
+&init_profiles
+/
+
+&mixing
+    surface_mixing = 1
+    coef_mix_conv = 0.125
+    coef_wind_stir = 0.23
+    coef_mix_shear = 0.2
+    coef_mix_turb = 0.51
+    coef_mix_kh = 0.3
+    deep_mixing = 2
+    coef_mix_hyp = 0.5
+    diff = 0.0
+/
+
+&output
+    out_dir = 'output'
+    out_fn = 'output'
+    nsave = 24
+    csv_lake_fname = 'lake'
+    csv_point_nlevs = 1
+    csv_point_fname = 'WQ_'
+    csv_point_at = 5.0
+    csv_point_nvars = 2
+    csv_point_vars = 'temp', 'salt', 'PHS_frp', 'NIT_amm'
+/
+
+&light
+    light_mode = 0
+    kw = 0.57
+    n_bands = 4
+    light_extc = 1.0, 0.5, 2.0, 4.0
+    energy_frac = 0.51, 0.45, 0.035, 0.005
+    benthic_imin = 10.0
+/
+
+&sediment
+    benthic_mode = 2
+    n_zones = 3
+    zone_heights = 10, 20, 50
+    sed_heat_ksoil = 0.0
+    sed_temp_depth = 0.2
+    sed_temp_mean = 5, 10, 20
+    sed_temp_amplitude = 6, 8, 10
+    sed_temp_peak_doy = 80, 70, 60
+    sed_reflectivity = 0.1, 0.01, 0.01
+    sed_roughness = 0.1, 0.01, 0.01
+/
+
+&snowice
+    snow_albedo_factor = 1.0
+    snow_rho_max = 300.0
+    snow_rho_min = 50.0
+/
+
+&meteorology
+    met_sw = .true.
+    subdaily = .true.
+    albedo_mode = 1
+    lw_type = 'LW_IN'
+    cloud_mode = 4
+    lw_factor = 1.0
+    lw_offset = 0.0
+    atm_stab = 0
+    ce = 0.0013
+    ch = 0.0013
+    rain_sw = .false.
+    cd = 0.0013
+    wind_factor = 1.0
+    fetch_mode = 0
+/
+
+&inflow
+/
+
+&outflow
+/
